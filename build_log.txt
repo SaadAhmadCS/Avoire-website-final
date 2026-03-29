@@ -1,0 +1,116 @@
+
+> avoire-website@0.1.0 build
+> next build
+
+ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\hp\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\hp\Downloads\Avoire-website-final-main\package-lock.json
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./Downloads/Avoire-website-final-main/app/checkout/page.jsx:4:1
+Export ShieldLock doesn't exist in target module
+   2 |
+   3 | import React, { useState, useEffect } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   ShoppingBag,
+     | ^^^^^^^^^^^^^^
+>  6 |   ChevronRight,
+     | ^^^^^^^^^^^^^^
+>  7 |   Lock,
+     | ^^^^^^^^^^^^^^
+>  8 |   Banknote,
+     | ^^^^^^^^^^^^^^
+>  9 |   Truck,
+     | ^^^^^^^^^^^^^^
+> 10 |   CheckCircle2,
+     | ^^^^^^^^^^^^^^
+> 11 |   Upload,
+     | ^^^^^^^^^^^^^^
+> 12 |   X,
+     | ^^^^^^^^^^^^^^
+> 13 |   Image as ImageIcon,
+     | ^^^^^^^^^^^^^^
+> 14 |   ArrowLeft,
+     | ^^^^^^^^^^^^^^
+> 15 |   ShieldLock
+     | ^^^^^^^^^^^^^^
+> 16 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  17 | import Link from "next/link";
+  18 | import { useCart } from "../context/CartContext";
+  19 | import CartCard from "../Components/CartCard";
+
+The export ShieldLock was not found in module [project]/Downloads/Avoire-website-final-main/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Shield?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/Avoire-website-final-main/app/checkout/page.jsx [Client Component Browser]
+    ./Downloads/Avoire-website-final-main/app/checkout/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/Avoire-website-final-main/app/checkout/page.jsx [Client Component SSR]
+    ./Downloads/Avoire-website-final-main/app/checkout/page.jsx [Server Component]
+
+
+./Downloads/Avoire-website-final-main/app/checkout/page.jsx:4:1
+Export ShieldLock doesn't exist in target module
+   2 |
+   3 | import React, { useState, useEffect } from "react";
+>  4 | import {
+     | ^^^^^^^^
+>  5 |   ShoppingBag,
+     | ^^^^^^^^^^^^^^
+>  6 |   ChevronRight,
+     | ^^^^^^^^^^^^^^
+>  7 |   Lock,
+     | ^^^^^^^^^^^^^^
+>  8 |   Banknote,
+     | ^^^^^^^^^^^^^^
+>  9 |   Truck,
+     | ^^^^^^^^^^^^^^
+> 10 |   CheckCircle2,
+     | ^^^^^^^^^^^^^^
+> 11 |   Upload,
+     | ^^^^^^^^^^^^^^
+> 12 |   X,
+     | ^^^^^^^^^^^^^^
+> 13 |   Image as ImageIcon,
+     | ^^^^^^^^^^^^^^
+> 14 |   ArrowLeft,
+     | ^^^^^^^^^^^^^^
+> 15 |   ShieldLock
+     | ^^^^^^^^^^^^^^
+> 16 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+  17 | import Link from "next/link";
+  18 | import { useCart } from "../context/CartContext";
+  19 | import CartCard from "../Components/CartCard";
+
+The export ShieldLock was not found in module [project]/Downloads/Avoire-website-final-main/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Shield?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./Downloads/Avoire-website-final-main/app/checkout/page.jsx [Client Component Browser]
+    ./Downloads/Avoire-website-final-main/app/checkout/page.jsx [Server Component]
+
+  Client Component SSR:
+    ./Downloads/Avoire-website-final-main/app/checkout/page.jsx [Client Component SSR]
+    ./Downloads/Avoire-website-final-main/app/checkout/page.jsx [Server Component]
+
+
+    at <unknown> (./Downloads/Avoire-website-final-main/app/checkout/page.jsx:4:1)
+    at <unknown> (./Downloads/Avoire-website-final-main/app/checkout/page.jsx:4:1)

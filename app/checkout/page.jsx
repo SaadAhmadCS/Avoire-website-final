@@ -12,7 +12,7 @@ import {
   X,
   Image as ImageIcon,
   ArrowLeft,
-  ShieldLock
+  ShieldCheck
 } from "lucide-react";
 import Link from "next/link";
 import { useCart } from "../context/CartContext";
@@ -464,7 +464,7 @@ const CheckoutPage = () => {
                    <span className="w-5 h-5 border-2 border-[#131313] border-t-transparent rounded-full animate-spin" />
                 ) : (
                   <>
-                    <ShieldLock size={18} className="group-hover:scale-110 transition-transform" />
+                    <ShieldCheck size={18} className="group-hover:scale-110 transition-transform" />
                     <span>Confirm Order — {total.toLocaleString()} PKR</span>
                   </>
                 )}
