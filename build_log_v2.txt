@@ -1,0 +1,51 @@
+
+> avoire-website@0.1.0 build
+> next build
+
+ΓÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\hp\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\hp\Downloads\Avoire-website-final-main\package-lock.json
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 4.9s
+  Running TypeScript ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/19) ...
+  Generating static pages using 11 workers (4/19) 
+  Generating static pages using 11 workers (9/19) 
+  Generating static pages using 11 workers (14/19) 
+Γ£ô Generating static pages using 11 workers (19/19) in 685.9ms
+  Finalizing page optimization ...
+
+Route (app)
+Γöî Γùï /
+Γö£ Γùï /_not-found
+Γö£ Γùï /about
+Γö£ Γùï /account
+Γö£ ╞Æ /api/auth/[...nextauth]
+Γö£ ╞Æ /api/cart-disabled
+Γö£ ╞Æ /api/contact
+Γö£ ╞Æ /api/orders/create
+Γö£ ╞Æ /api/products
+Γö£ ╞Æ /api/products/[slug]
+Γö£ ╞Æ /api/user/update
+Γö£ Γùï /cart
+Γö£ Γùï /checkout
+Γö£ Γùï /contact
+Γö£ Γùï /login
+Γö£ Γùï /privacy
+Γö£ Γùï /shop
+Γö£ ╞Æ /shop/[slug]
+Γö£ Γùï /terms-of-service
+Γöö Γùï /wishlist
+
+
+Γùï  (Static)   prerendered as static content
+╞Æ  (Dynamic)  server-rendered on demand
+
