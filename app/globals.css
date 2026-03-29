@@ -1,0 +1,302 @@
+@import "tailwindcss";
+
+:root {
+  --font-primary: var(--font-noto-serif);
+  --font-secondary: var(--font-inter);
+  color-scheme: dark;
+
+  /* Backgrounds & surfaces - Noir Atelier Palette */
+  --bg-page: #131313;
+  --bg-surface: #131313;
+  --bg-card: #20201f;
+  --bg-subtle: #1c1b1b;
+
+  /* Borders / dividers */
+  --border-default: #4d453e;
+  --border-subtle: #353535;
+  --border-strong: #9a8f86;
+
+  /* Text */
+  --text-primary: #e5e2e1;
+  --text-body: #e5e2e1;
+  --text-muted: #d1c4ba;
+  --text-disabled: #4d453e;
+  --text-inverse: #131313;
+
+  /* Primary accent (Champagne Gold) */
+  --accent-primary: #e8cfb8;
+  --accent-hover: #dac2ac;
+  --accent-active: #f7dec7;
+  --accent-muted: rgba(232, 207, 184, 0.12);
+
+  /* Secondary accent */
+  --accent-secondary: #d3c4b6;
+
+  /* Focus ring */
+  --focus-ring: #e8cfb8;
+}
+
+@theme inline {
+  --spacing-page-x: clamp(1rem, 5vw, 2rem);
+  --spacing-page-y: 1.5rem;
+  --spacing-section: clamp(3rem, 8vw, 5rem);
+}
+
+/* ---------------------------------------------------------------------------
+   Typography — headline, subheading, body, UI
+   --------------------------------------------------------------------------- */
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+  --font-headline: var(--font-noto-serif), Georgia, serif;
+  --font-display: var(--font-noto-serif), Georgia, serif;
+  --font-label: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --font-size-headline-xl: clamp(3rem, 8vw, 6rem);
+  --font-size-headline-lg: clamp(2rem, 5vw, 4rem);
+  --font-size-headline: clamp(1.5rem, 3vw, 2.5rem);
+  --font-size-subheading: 1.25rem;
+  --font-size-body: 1.125rem;
+  --font-size-body-sm: 1rem;
+  --font-size-ui: 0.875rem;
+  --font-size-caption: 0.75rem;
+
+  --line-height-headline: 1.1;
+  --line-height-subheading: 1.35;
+  --line-height-body: 1.8;
+  --line-height-ui: 1.4;
+  --line-height-tight: 1.1;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-widest: 0.15em;
+}
+
+/* ---------------------------------------------------------------------------
+   Semantic color utilities (Tailwind)
+   --------------------------------------------------------------------------- */
+
+@theme inline {
+  --color-bg-page: var(--bg-page);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-card: var(--bg-card);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-text-primary: var(--text-primary);
+  --color-text-body: var(--text-body);
+  --color-text-secondary: var(--text-muted);
+  --color-text-muted: var(--text-muted);
+  --color-text-tertiary: var(--text-disabled);
+  --color-text-disabled: var(--text-disabled);
+  --color-text-inverse: var(--text-inverse);
+  --color-border-default: var(--border-default);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent-primary);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-active: var(--accent-active);
+  --color-accent-muted: var(--accent-muted);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-focus-ring: var(--focus-ring);
+  
+  /* Additional UI Colors */
+  --color-surface-container: #20201f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353535;
+}
+
+/* ---------------------------------------------------------------------------
+   Base styles
+   --------------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+   width:100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width:100%;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .logo, .hero-title {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+/* Focus visible for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Header — nav link underline hover (use .nav-link-underline)
+   --------------------------------------------------------------------------- */
+
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--accent-primary);
+  transition: width 0.25s ease-out;
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline.is-active::after {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link-underline::after {
+    transition: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Theme-based logo switching (instant, no JavaScript lag)
+   --------------------------------------------------------------------------- */
+
+/* Default (dark mode): show dark logo, hide light logo */
+.dark-logo {
+  display: block !important;
+}
+
+.light-logo {
+  display: none !important;
+}
+
+/* Light mode: hide dark logo, show light logo */
+[data-theme="light"] .dark-logo {
+  display: none !important;
+}
+
+[data-theme="light"] .light-logo {
+  display: block !important;
+}
+
+/* Also handle system preference when no explicit theme is set */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .dark-logo {
+    display: none !important;
+  }
+
+  :root:not([data-theme="dark"]) .light-logo {
+    display: block !important;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.animate-shimmer {
+  animation: shimmer 1.4s infinite;
+}
+
+/* Product card hover overlay */
+.product-card:hover .description-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hidden scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Luxury Reveal Animations
+   --------------------------------------------------------------------------- */
+
+@keyframes reveal-up {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes reveal-down {
+  0% {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slow-zoom {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes subtle-drift {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(1%, -1%); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-reveal-up {
+  opacity: 0;
+  animation: reveal-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-reveal-down {
+  opacity: 0;
+  animation: reveal-down 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-subtle-drift {
+  animation: subtle-drift 10s ease-in-out infinite;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.5s; }
+.stagger-5 { animation-delay: 0.7s; }
+
+/* Custom Vertical Text */
+.vertical-text {
+  writing-mode: vertical-rl;
+}

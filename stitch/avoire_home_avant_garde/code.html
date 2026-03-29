@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Avoire | The Noir Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#393939",
+                        "primary-fixed": "#f7dec7",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#544433",
+                        "on-error": "#690005",
+                        "surface-variant": "#353535",
+                        "primary-fixed-dim": "#dac2ac",
+                        "on-tertiary": "#303030",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-container": "#cbb49e",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "secondary-fixed-dim": "#d3c4b6",
+                        "on-secondary-fixed-variant": "#4f453a",
+                        "surface-container-highest": "#353535",
+                        "on-surface-variant": "#d1c4ba",
+                        "on-primary": "#3c2e1e",
+                        "inverse-primary": "#6d5b49",
+                        "surface-container": "#20201f",
+                        "secondary-container": "#4f453a",
+                        "outline": "#9a8f86",
+                        "tertiary-fixed": "#e4e2e2",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#efe0d1",
+                        "on-primary-fixed": "#26190b",
+                        "on-secondary": "#382f25",
+                        "on-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "secondary": "#d3c4b6",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary": "#d5d3d3",
+                        "primary": "#e8cfb8",
+                        "surface-tint": "#dac2ac",
+                        "on-secondary-container": "#c1b3a5",
+                        "on-background": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#b9b8b8",
+                        "outline-variant": "#4d453e",
+                        "background": "#131313",
+                        "on-tertiary-container": "#494949",
+                        "on-primary-container": "#564634",
+                        "on-secondary-fixed": "#221a11"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .text-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .asymmetric-overlap {
+            margin-top: -15vh;
+        }
+        .noir-gradient {
+            background: radial-gradient(circle at center, transparent 0%, #131313 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-xl shadow-[0_40px_40px_-15px_rgba(229,226,225,0.04)]">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-[-0.02em] text-[#e8cfb8] font-headline">Avoire</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-[#e8cfb8] border-b border-[#e8cfb8]/30 pb-1 font-noto-serif tracking-tight leading-relaxed transition-all duration-700" href="#">Collections</a>
+<a class="text-[#e5e2e1] opacity-80 font-noto-serif tracking-tight leading-relaxed hover:text-[#e8cfb8] hover:opacity-100 transition-all duration-700" href="#">The Atelier</a>
+<a class="text-[#e5e2e1] opacity-80 font-noto-serif tracking-tight leading-relaxed hover:text-[#e8cfb8] hover:opacity-100 transition-all duration-700" href="#">Heritage</a>
+<a class="text-[#e5e2e1] opacity-80 font-noto-serif tracking-tight leading-relaxed hover:text-[#e8cfb8] hover:opacity-100 transition-all duration-700" href="#">Bespoke</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-[#e8cfb8] scale-105 transition-transform duration-500 ease-out">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section: Avant-Garde Asymmetry -->
+<section class="relative min-h-screen flex items-center overflow-hidden pt-20">
+<!-- Structural Typography Backdrop -->
+<div class="absolute -left-10 top-1/2 -translate-y-1/2 select-none opacity-[0.03] pointer-events-none">
+<h1 class="font-headline text-[30rem] leading-none tracking-tighter">ESSENCE</h1>
+</div>
+<div class="container mx-auto px-6 md:px-12 grid grid-cols-12 gap-6 items-center relative z-10">
+<!-- Asymmetric Image Column -->
+<div class="col-span-12 md:col-span-7 relative">
+<div class="aspect-[4/5] w-full overflow-hidden shadow-2xl">
+<img alt="Luxury perfume bottle" class="w-full h-full object-cover scale-110" data-alt="Close-up of a dark amber glass perfume bottle with a golden cap, emerging from deep shadows with dramatic rim lighting and smoke texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUvzQcOyz6482T1HuVFqJ2RbirAbtV8G49Gt9GfeKViWbOnWys0ibA_Xfy_m8saLma9bPIP75tlBmpDntzeup58dlHIqzadtVcAHDw7iWo6hgEsJn83VMpOy1iWobHToW_xu7cBpOEpwoFDgM9FKZhp6FnP_K5CcK0dvuOgzBx4o8LY2KEARZw2200BzaF36BRRbgmDMg_xlut9ESmJpUC4k7T9IWGwwr0t045pIx-s6yM5YuGidsMFir1jv6qBNcXh0EWWRRMWJA"/>
+</div>
+<!-- Floating Detail Card -->
+<div class="absolute -bottom-12 -right-12 hidden lg:block bg-surface-container-high p-8 max-w-xs shadow-xl border border-outline-variant/10 backdrop-blur-md">
+<span class="text-primary font-label uppercase tracking-widest text-[0.65rem] block mb-4">Current Curation</span>
+<h3 class="font-headline text-2xl text-on-surface mb-2">Midnight Oud</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">A deep, resinous journey through charred woods and wild bergamot.</p>
+<button class="text-primary font-label uppercase tracking-[0.2em] text-[0.7rem] flex items-center group">
+                        Discover Scent <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">trending_flat</span>
+</button>
+</div>
+</div>
+<!-- Text Column -->
+<div class="col-span-12 md:col-span-4 md:col-start-9 mt-12 md:mt-0">
+<div class="space-y-8">
+<div class="flex items-center space-x-4">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="font-label uppercase tracking-[0.3em] text-[0.7rem] text-primary">Est. 1924</span>
+</div>
+<h2 class="font-headline text-5xl md:text-7xl leading-[1.1] tracking-tight italic">
+                        The Poetry <br/>
+<span class="not-italic text-on-surface/40">of Shadows.</span>
+</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-sm">
+                        Crafting olfactory manuscripts that linger in the architecture of memory. Avoire is not a fragrance; it is a signature of existence.
+                    </p>
+<div class="pt-8 flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 font-label uppercase tracking-widest text-xs transition-transform hover:scale-105 active:scale-95 shadow-lg">
+                            Explore Collections
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Olfactory Narrative: Layered Imagery Section -->
+<section class="py-32 relative">
+<div class="max-w-[1400px] mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<!-- Left Content: Vertical Narrative -->
+<div class="relative order-2 md:order-1">
+<div class="absolute -left-20 top-0 text-vertical text-[10rem] font-headline text-on-surface/[0.02] select-none">
+                        STORYTELLING
+                    </div>
+<div class="space-y-12 relative z-10">
+<h2 class="font-headline text-4xl md:text-5xl leading-tight">
+                            An Atelier of <br/>
+<span class="text-primary italic">Invisible Art.</span>
+</h2>
+<div class="space-y-6 text-on-surface-variant leading-loose text-lg">
+<p>Each Avoire creation begins with a narrative—a moment captured in the humid air of a Mediterranean garden at dusk, or the cold, metallic silence of a modern gallery.</p>
+<p>We source rare botanicals and synthetic molecules with the same rigor a curator applies to a lost masterpiece. Our process is slow, deliberate, and entirely uncompromising.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-highest px-4 py-2 rounded-full text-[0.7rem] font-label uppercase tracking-wider text-on-surface-variant">Rare Oud</div>
+<div class="bg-surface-container-highest px-4 py-2 rounded-full text-[0.7rem] font-label uppercase tracking-wider text-on-surface-variant">Silver Birch</div>
+<div class="bg-surface-container-highest px-4 py-2 rounded-full text-[0.7rem] font-label uppercase tracking-wider text-on-surface-variant">Amber Gris</div>
+</div>
+</div>
+</div>
+<!-- Right Content: Layered Visuals -->
+<div class="relative h-[600px] order-1 md:order-2">
+<!-- Main Image -->
+<div class="absolute inset-0 w-3/4 h-[80%] z-10 shadow-2xl overflow-hidden">
+<img alt="Artist at work" class="w-full h-full object-cover grayscale brightness-75 hover:scale-105 transition-transform duration-1000" data-alt="Black and white artistic photograph of glass beakers and botanical specimens in a dimly lit laboratory, fine mist in the air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Qsb4Mw5rTN2QEYXkqt_xjn9M2rGVUuDv8Eh1NOusf4LRmJ1IZRqWiKu_kgH8sga8RP_wzKZBYn_JR0L3QL7XEHPmYliKu3kap5v1m5T4Wr5sSJ4VdyA4JDbPH_3Q7JItORXZ7MnMyiyPuiuuTVNtK5SQXfYu4Ig-XIyQ8rfJK-aBa8iXUq3S3_kKeS4tQhhtiePDqYT5iaLQAWStRt-LW26EkTvrxN1j5u_J8yvY6_Ujm0cavKHckiLXUAJLmCOe-X7SupziVA4"/>
+</div>
+<!-- Overlapping Accent Image -->
+<div class="absolute -bottom-10 right-0 w-1/2 h-1/2 z-20 shadow-2xl border-4 border-surface overflow-hidden">
+<img alt="Botanical detail" class="w-full h-full object-cover" data-alt="Macro photography of crushed dark petals and vibrant amber resin on a black stone surface with glistening textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJW6unsj52qYmK3pBoiKawWO9gDSxYqYS_D-u2rOkT7MGamqnrqXH0UfZtp-fi-09uv43FHlqg8Lqyufdj8EHATzwLQd-yQdvfYYg7z_Gp8UUINTobyl7zwLIhaxp2xTz7eufKw2OEjOtiCw5bSZSSnTg4NgS9-kH3ZYoEcP5m6hDOcc4Z2nL6XBNwLgjhiOsHiAUkMoA3wc8MVs4dctieLr8qpb6xzCm-nV6wDQ-X9fCDBaW_4m9VsAkI3Ossd5dS2Nrcld9NgM8"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Edit: Unconventional Grid Showcase -->
+<section class="bg-surface-container-low py-32 overflow-hidden">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div class="max-w-xl">
+<span class="font-label uppercase tracking-[0.4em] text-[0.65rem] text-primary block mb-6">The Selection</span>
+<h2 class="font-headline text-5xl md:text-6xl tracking-tight">Signature Edit</h2>
+</div>
+<div class="flex items-center space-x-4 pb-4 border-b border-outline-variant/30">
+<span class="font-label text-xs uppercase tracking-widest">View All Works</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</div>
+<!-- Asymmetric Grid -->
+<div class="grid grid-cols-12 gap-y-24 md:gap-y-0 md:gap-x-12">
+<!-- Product 1: Large Offset -->
+<div class="col-span-12 md:col-span-5 space-y-8">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden group relative">
+<img alt="Scent No. 04" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sleek black perfume bottle on a reflective black surface with golden light reflecting off the glass edge, minimalist composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBny-VN_RpPdD81DxcSl2jMUlDGW2ygEs0W2OpEe_kXLMBJPZrpEdjQfBw29HqnFBCKLoOhvZhK37ZhGr8nQhoovQoq6qr2SIcZmrfajdTeuALVOYfQxhZsNefsYkXi10mcLysc1LP37XKbIEQFrVODvXl5I_sAQWsg6NW02XyIoObf4YAM-fbF_Ybiy_CrULC4gBm8p4isKf8fXQgUNmbjuuXtbZzoMOwGn9QtHlBeH7QSGU72nyL6gRvbYFjVGhJLHhTD-CqqPvU"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+<button class="bg-primary text-on-primary p-4 rounded-full">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline text-2xl">Argent 04</h4>
+<span class="text-primary font-body">€185</span>
+</div>
+<p class="text-on-surface-variant text-sm tracking-wide uppercase">Silver Bark • Juniper • Iron</p>
+</div>
+</div>
+<!-- Product 2: Small & Elevated -->
+<div class="col-span-12 md:col-span-3 md:pt-48 space-y-8">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden group relative shadow-2xl">
+<img alt="Scent No. 12" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Luxury minimalist perfume bottle with a textured label, placed against a background of dark volcanic rock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeRgruhFFuKLYukJ-7NSmifmqxaZ_vty0tVm0brC7A-YffV-tfxDuAzfET2fpaLBcTYkxpWfiXxnFOkxGuKYhgDxrAYLbVE0xYvRG7unVQDl1wVDRlsp6QVYTx8h3KZMmmPIaTmlnrMHsv2Lr7PBlmHrxKP7GgGUb8pQ6PZaXFqc69k9SJklIJB2FqcVLKN9Kg6WD6sokAEKG6xBl4Sq6WeD3HKzvZ2B-a83hAyOJ0ZK8Pcizd38ohoU-zZvuZ2yVu_dRbmjL99KM"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+<button class="bg-primary text-on-primary p-4 rounded-full">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline text-2xl">Noir 12</h4>
+<span class="text-primary font-body">€210</span>
+</div>
+<p class="text-on-surface-variant text-sm tracking-wide uppercase">Dark Cacao • Tobacco • Leather</p>
+</div>
+</div>
+<!-- Product 3: Medium & Centered -->
+<div class="col-span-12 md:col-span-4 md:pt-24 space-y-8">
+<div class="aspect-square bg-surface-container overflow-hidden group relative">
+<img alt="Scent No. 09" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Elegant tall fragrance bottle with a gold collar, isolated against a soft-focus background of silk curtains in moonlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF1rgrq1Yz9D-dsOLGB-2V3bYb6W6n11gY_woqIR0Ort5SEwUqbOE2b2bUfjhgEnZXGRvzS0isBINZQSzTolyATAa3XFTYSVM1reMc-N87iqDXotSCe13HMJ4TOHU2FoV_UgRFbqMVYVS7zG716phv0kWkJpyC_X0w7tbzWnZyNqjsZmz2RkThdY-n0EmJjHJr8uT_XN0N0YQ6TwxbYKhoJ0vTjGD6foc5sk-uoVmIs8o4LhtFlskRqjG73fCcovAA6pIZGtVb9T4"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+<button class="bg-primary text-on-primary p-4 rounded-full">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline text-2xl">Aurore 09</h4>
+<span class="text-primary font-body">€195</span>
+</div>
+<p class="text-on-surface-variant text-sm tracking-wide uppercase">Golden Saffron • Honey • Musk</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full pt-32 pb-12 font-inter text-[0.75rem] uppercase tracking-[0.1em] leading-[1.6]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 px-16 max-w-[1920px] mx-auto">
+<div class="space-y-8 col-span-1 md:col-span-1">
+<div class="text-lg font-noto-serif text-[#e8cfb8]">Avoire</div>
+<p class="text-[#e5e2e1]/60 normal-case leading-relaxed">
+                    A private sanctuary for olfactory exploration. Crafted with archival intent in our Parisian atelier.
+                </p>
+</div>
+<div class="space-y-6">
+<h4 class="text-[#e8cfb8]">Boutiques</h4>
+<ul class="space-y-4 text-[#e5e2e1]/60">
+<li class="hover:text-[#e8cfb8] transition-colors duration-500 cursor-pointer">Paris Marais</li>
+<li class="hover:text-[#e8cfb8] transition-colors duration-500 cursor-pointer">London Mayfair</li>
+<li class="hover:text-[#e8cfb8] transition-colors duration-500 cursor-pointer">New York Soho</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-[#e8cfb8]">Curatorial</h4>
+<ul class="space-y-4">
+<li><a class="text-[#e5e2e1]/60 hover:text-[#e8cfb8] transition-colors duration-500" href="#">Privacy Policy</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#e8cfb8] transition-colors duration-500" href="#">Terms of Service</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#e8cfb8] transition-colors duration-500" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-[#e5e2e1]/60 hover:text-[#e8cfb8] transition-colors duration-500" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-[#e8cfb8]">Newsletter</h4>
+<div class="relative group">
+<input class="bg-transparent border-b border-outline-variant/30 w-full py-4 text-[0.7rem] focus:outline-none focus:border-primary transition-colors uppercase tracking-widest placeholder:text-on-surface/30" placeholder="JOIN THE ATELIER" type="email"/>
+<button class="absolute right-0 bottom-4 text-primary">
+<span class="material-symbols-outlined">north_east</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-32 px-16 flex flex-col md:flex-row justify-between items-center text-[#e5e2e1]/40 text-[0.6rem] border-t border-outline-variant/10 pt-12">
+<p>© 2024 Avoire Fragrances. All Rights Reserved.</p>
+<div class="flex space-x-8 mt-4 md:mt-0">
+<span>Instagram</span>
+<span>Vogue Archive</span>
+<span>Editorial Bureau</span>
+</div>
+</div>
+</footer>
+</body></html>

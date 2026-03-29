@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #131313;
+      color: #e5e2e1;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #131313;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #353535;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed": "#1b1c1c",
+            "secondary-fixed": "#efe0d1",
+            "tertiary-fixed": "#e4e2e2",
+            "tertiary-fixed-dim": "#c7c6c6",
+            "on-error": "#690005",
+            "surface": "#131313",
+            "secondary-container": "#4f453a",
+            "surface-container": "#20201f",
+            "on-secondary-fixed": "#221a11",
+            "on-tertiary": "#303030",
+            "on-primary-fixed-variant": "#544433",
+            "on-surface-variant": "#d1c4ba",
+            "on-primary": "#3c2e1e",
+            "on-background": "#e5e2e1",
+            "surface-container-low": "#1c1b1b",
+            "on-secondary-container": "#c1b3a5",
+            "error-container": "#93000a",
+            "surface-variant": "#353535",
+            "on-primary-fixed": "#26190b",
+            "surface-container-lowest": "#0e0e0e",
+            "on-tertiary-fixed-variant": "#464747",
+            "primary-fixed-dim": "#dac2ac",
+            "error": "#ffb4ab",
+            "inverse-primary": "#6d5b49",
+            "background": "#131313",
+            "inverse-surface": "#e5e2e1",
+            "surface-container-highest": "#353535",
+            "tertiary": "#d5d3d3",
+            "secondary-fixed-dim": "#d3c4b6",
+            "on-error-container": "#ffdad6",
+            "primary-container": "#cbb49e",
+            "outline-variant": "#4d453e",
+            "on-secondary": "#382f25",
+            "surface-tint": "#dac2ac",
+            "inverse-on-surface": "#313030",
+            "primary-fixed": "#f7dec7",
+            "primary": "#e8cfb8",
+            "on-secondary-fixed-variant": "#4f453a",
+            "surface-bright": "#393939",
+            "tertiary-container": "#b9b8b8",
+            "surface-dim": "#131313",
+            "on-surface": "#e5e2e1",
+            "secondary": "#d3c4b6",
+            "outline": "#9a8f86",
+            "on-primary-container": "#564634",
+            "on-tertiary-container": "#494949",
+            "surface-container-high": "#2a2a2a"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(229,226,225,0.04)]">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-['Noto_Serif'] text-2xl tracking-[0.2em] text-[#e8cfb8] uppercase" href="#">AVOIRE</a>
+<div class="hidden md:flex gap-8">
+<a class="font-['Inter'] uppercase tracking-[0.1em] text-[0.75rem] text-[#e5e2e1] hover:text-[#e8cfb8] transition-colors duration-500" href="#">Home</a>
+<a class="font-['Inter'] uppercase tracking-[0.1em] text-[0.75rem] text-[#e5e2e1] hover:text-[#e8cfb8] transition-colors duration-500" href="#">Collection</a>
+<a class="font-['Inter'] uppercase tracking-[0.1em] text-[0.75rem] text-[#e5e2e1] hover:text-[#e8cfb8] transition-colors duration-500" href="#">Our Story</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-80 transition-all duration-700 ease-in-out text-[#e8cfb8]">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:opacity-80 transition-all duration-700 ease-in-out text-[#e8cfb8]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-16 px-6 md:px-12 max-w-[1920px] mx-auto min-h-screen">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Shopping Bag Section (Left Column) -->
+<section class="lg:col-span-7">
+<div class="mb-12">
+<h1 class="font-headline text-4xl tracking-tighter text-on-surface mb-2">Shopping Bag</h1>
+<p class="font-label text-[0.7rem] uppercase tracking-widest text-outline">3 Items Selected</p>
+</div>
+<div class="space-y-12">
+<!-- Item 1 -->
+<div class="flex gap-8 group">
+<div class="w-40 h-52 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="luxury perfume bottle with minimalist label on a dark stone surface with dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQEAzoUl7Jo5Jb0d039AAKHZ7pE-e5JVHDRbtPMFXUkERt6bYKjhgMgKnneFBb76E2AgSL0reimDalfdvo4mzeWyqQ2WMXsQUTKJuaF7WKYNZ63rWqFpu_IqZIPTINrd5iWBXpG8v6lF_3NCgiBphJC2tB6CfhtzmhKUrglDCh44LCWvEbz1sJHF4qPjSGoWpNeCo3pwkbXneXrBCO5SJTKMvAxoL_RStBuBAnrzxLm8VZYTFRodl2w4PVsftislt1xoWjGdUvC-Y"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-2">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl text-on-surface mb-1">L'Obscurité</h3>
+<p class="font-label text-[0.7rem] uppercase tracking-widest text-primary">Eau de Parfum / 100ml</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center gap-4 border-b border-outline-variant pb-1">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="remove">remove</span>
+</button>
+<span class="font-body text-sm px-2">1</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="add">add</span>
+</button>
+</div>
+<span class="font-headline text-lg text-on-surface">$240.00</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-8 group">
+<div class="w-40 h-52 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="amber glass fragrance bottle amidst soft botanical shadows and dark moody background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEHl2FfxYk4CF_9gKldLxh6X3tdRzpgBpJQF0maljR7cR1KrhWL8HPDsf_b8Y_6q8tDOZe6psoP6olrj29yAmZL9Ma2RA_nb0gB36EpW3GI97Kx5z1VcrIwNvgDdunBhBwAJS0RgCNU27pDaqIrN8z56DGs1bSx7dZ2exOtTi-7U2gxJr8N7FvMjNaZMzw2tRWYaKgS3-PP4wfuus8HrYl51p08qbKXBZVGVRRgr5f9a3uJOK7CmX6f166a7MKMON2B4wdbdd1nPo"/>
+</div>
+<div class="flex-1 flex flex-col justify-between py-2">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-xl text-on-surface mb-1">Ambre Nuit</h3>
+<p class="font-label text-[0.7rem] uppercase tracking-widest text-primary">Extrait de Parfum / 50ml</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex items-center gap-4 border-b border-outline-variant pb-1">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="remove">remove</span>
+</button>
+<span class="font-body text-sm px-2">1</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="add">add</span>
+</button>
+</div>
+<span class="font-headline text-lg text-on-surface">$310.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Luxury Extras -->
+<div class="mt-20 pt-12 border-t border-outline-variant/20">
+<div class="bg-surface-container-low p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex gap-6 items-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="featured_seasonal_and_gifts">featured_seasonal_and_gifts</span>
+<div>
+<h4 class="font-headline text-lg text-on-surface">Complimentary Gift Wrapping</h4>
+<p class="font-body text-sm text-on-surface-variant max-w-xs">Signature noir paper, gold silk ribbon, and a personalized wax-sealed note.</p>
+</div>
+</div>
+<button class="font-label text-[0.75rem] uppercase tracking-widest border border-primary/30 px-6 py-3 text-primary hover:bg-primary hover:text-on-primary transition-all duration-500">Add Service</button>
+</div>
+<p class="mt-8 font-body text-[0.8rem] text-outline text-center italic">Each Avoire creation is nestled in our archival-grade, eco-conscious premium packaging designed for preservation.</p>
+</div>
+</section>
+<!-- Checkout Flow (Right Column) -->
+<aside class="lg:col-span-5 relative">
+<div class="sticky top-32 bg-surface-container-low p-10 shadow-2xl">
+<div class="flex justify-between mb-10">
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<span class="font-label text-[0.65rem] uppercase tracking-tighter text-primary">01 Shipping</span>
+<div class="h-[2px] w-12 bg-primary"></div>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-40">
+<span class="font-label text-[0.65rem] uppercase tracking-tighter text-on-surface">02 Payment</span>
+<div class="h-[1px] w-12 bg-outline-variant"></div>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-40">
+<span class="font-label text-[0.65rem] uppercase tracking-tighter text-on-surface">03 Review</span>
+<div class="h-[1px] w-12 bg-outline-variant"></div>
+</div>
+</div>
+<form class="space-y-8">
+<div class="space-y-6">
+<h2 class="font-headline text-2xl text-on-surface mb-6">Delivery Information</h2>
+<div class="grid grid-cols-2 gap-6">
+<div class="col-span-1 border-b border-outline-variant/30 py-2 focus-within:border-primary transition-colors">
+<label class="block font-label text-[0.6rem] uppercase tracking-widest text-primary mb-1">First Name</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body text-sm placeholder:text-outline-variant" type="text" value="Julian"/>
+</div>
+<div class="col-span-1 border-b border-outline-variant/30 py-2 focus-within:border-primary transition-colors">
+<label class="block font-label text-[0.6rem] uppercase tracking-widest text-primary mb-1">Last Name</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body text-sm" type="text" value="Vanhoutte"/>
+</div>
+</div>
+<div class="border-b border-outline-variant/30 py-2 focus-within:border-primary transition-colors">
+<label class="block font-label text-[0.6rem] uppercase tracking-widest text-primary mb-1">Address</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body text-sm" type="text" value="72 Place Vendôme"/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="col-span-1 border-b border-outline-variant/30 py-2 focus-within:border-primary transition-colors">
+<label class="block font-label text-[0.6rem] uppercase tracking-widest text-primary mb-1">City</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body text-sm" type="text" value="Paris"/>
+</div>
+<div class="col-span-1 border-b border-outline-variant/30 py-2 focus-within:border-primary transition-colors">
+<label class="block font-label text-[0.6rem] uppercase tracking-widest text-primary mb-1">Postal Code</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body text-sm" type="text" value="75001"/>
+</div>
+</div>
+</div>
+<div class="pt-8 space-y-4">
+<div class="flex justify-between font-body text-sm text-on-surface-variant">
+<span>Subtotal</span>
+<span>$550.00</span>
+</div>
+<div class="flex justify-between font-body text-sm text-on-surface-variant">
+<span>Shipping</span>
+<span class="uppercase tracking-widest text-[0.7rem] text-primary">Complimentary</span>
+</div>
+<div class="flex justify-between font-headline text-xl text-on-surface pt-4 border-t border-outline-variant/10">
+<span>Total</span>
+<span>$550.00</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 font-label text-[0.8rem] uppercase tracking-[0.2em] font-bold hover:opacity-90 active:scale-[0.98] transition-all duration-300">
+              Continue to Payment
+            </button>
+<p class="flex items-center justify-center gap-2 text-[0.65rem] text-outline uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]" data-icon="lock">lock</span> 
+              Encrypted secure checkout
+            </p>
+</form>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-[#0e0e0e] w-full pt-24 pb-12">
+<div class="flex flex-col items-center w-full px-16 max-w-7xl mx-auto">
+<div class="font-['Noto_Serif'] text-3xl tracking-[0.3em] text-[#e8cfb8] mb-8 uppercase">AVOIRE</div>
+<div class="flex flex-wrap justify-center gap-12 mb-16">
+<a class="font-['Inter'] uppercase tracking-widest text-[0.7rem] text-[#e5e2e1]/60 hover:text-[#e8cfb8] focus:underline decoration-[#e8cfb8]/30 underline-offset-4 transition-colors duration-500" href="#">Privacy Policy</a>
+<a class="font-['Inter'] uppercase tracking-widest text-[0.7rem] text-[#e5e2e1]/60 hover:text-[#e8cfb8] focus:underline decoration-[#e8cfb8]/30 underline-offset-4 transition-colors duration-500" href="#">Terms of Service</a>
+<a class="font-['Inter'] uppercase tracking-widest text-[0.7rem] text-[#e5e2e1]/60 hover:text-[#e8cfb8] focus:underline decoration-[#e8cfb8]/30 underline-offset-4 transition-colors duration-500" href="#">Shipping &amp; Returns</a>
+<a class="font-['Inter'] uppercase tracking-widest text-[0.7rem] text-[#e5e2e1]/60 hover:text-[#e8cfb8] focus:underline decoration-[#e8cfb8]/30 underline-offset-4 transition-colors duration-500" href="#">Contact Us</a>
+</div>
+<div class="w-full border-t border-outline-variant/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-['Inter'] uppercase tracking-widest text-[0.7rem] text-[#e5e2e1]/40">© 2024 AVOIRE ATELIER. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<span class="material-symbols-outlined text-outline-variant" data-icon="brand_awareness">brand_awareness</span>
+<span class="material-symbols-outlined text-outline-variant" data-icon="verified">verified</span>
+<span class="material-symbols-outlined text-outline-variant" data-icon="shield_with_heart">shield_with_heart</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shop | Avoire Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#313030",
+                        "surface-bright": "#393939",
+                        "primary-fixed": "#f7dec7",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed-variant": "#544433",
+                        "surface-variant": "#353535",
+                        "primary-fixed-dim": "#dac2ac",
+                        "on-tertiary": "#303030",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-container": "#cbb49e",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed-dim": "#d3c4b6",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "on-secondary-fixed-variant": "#4f453a",
+                        "on-surface-variant": "#d1c4ba",
+                        "surface-container-highest": "#353535",
+                        "on-primary": "#3c2e1e",
+                        "inverse-primary": "#6d5b49",
+                        "outline": "#9a8f86",
+                        "surface-container": "#20201f",
+                        "secondary-container": "#4f453a",
+                        "tertiary-fixed": "#e4e2e2",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "secondary-fixed": "#efe0d1",
+                        "on-primary-fixed": "#26190b",
+                        "on-secondary": "#382f25",
+                        "on-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "secondary": "#d3c4b6",
+                        "tertiary": "#d5d3d3",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-tint": "#dac2ac",
+                        "on-secondary-container": "#c1b3a5",
+                        "primary": "#e8cfb8",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#b9b8b8",
+                        "outline-variant": "#4d453e",
+                        "background": "#131313",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#494949",
+                        "on-secondary-fixed": "#221a11",
+                        "on-primary-container": "#564634"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 no-border bg-gradient-to-b from-[#131313] to-transparent">
+<nav class="flex justify-between items-center w-full px-12 py-8 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-headline tracking-widest text-primary">Avoire</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-label text-on-surface/70 hover:text-primary transition-colors duration-500 uppercase tracking-[0.1em] text-xs" href="#">Home</a>
+<a class="font-label text-primary border-b border-primary/30 pb-1 uppercase tracking-[0.1em] text-xs" href="#">Shop</a>
+<a class="font-label text-on-surface/70 hover:text-primary transition-colors duration-500 uppercase tracking-[0.1em] text-xs" href="#">About</a>
+<a class="font-label text-on-surface/70 hover:text-primary transition-colors duration-500 uppercase tracking-[0.1em] text-xs" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-8">
+<button class="text-primary hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button class="text-primary hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32">
+<!-- Hero Title Section -->
+<section class="px-12 mb-20">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-primary uppercase tracking-[0.2em] text-xs mb-4 block">The Anthology</span>
+<h1 class="font-headline text-5xl md:text-7xl leading-tight -tracking-[0.02em]">Curated Olfactory <br/>Experiences</h1>
+</div>
+<div class="flex gap-4 pb-2">
+<button class="font-label px-6 py-2 rounded-full border border-outline-variant/30 text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-500">Floral</button>
+<button class="font-label px-6 py-2 rounded-full border border-outline-variant/30 text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-500">Woody</button>
+<button class="font-label px-6 py-2 rounded-full border border-outline-variant/30 text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-500">Oriental</button>
+<button class="font-label px-6 py-2 rounded-full border border-outline-variant/30 text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-500">Fresh</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="px-12 pb-32">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12">
+<!-- Product Card 1 -->
+<div class="group flex flex-col">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-8 relative">
+<img alt="Luxury perfume bottle" class="w-full h-full object-cover grayscale-[0.3] group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="Minimalist luxury perfume bottle with gold cap resting on dark charcoal marble surface with dramatic architectural shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYI2CPfF-PHBsqgjhITBo1MuCFYKl1R9DoDhtoADTM0e4caTkm8lB6TPNP3juv6PT0P1M3u1jwKinde_T2a8_AEOoDGQAPzlOIDDagsLqP248e7LmFw_d1fNPxyzhmiewtL8Ml9XdziwZW_XewsQQvGMAoE51G_wPvGisud3haK-cRQBe5ygvAm16Okm5PHhB_8dBUVEdlje3w66_jjNJ5Ryucg4Kk3Dm3ovuDe6ihPLQEl0LvDRRP2o6xsCUPN1UZRk3xzBtFr5M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<div class="flex gap-2">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Oud</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Saffron</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl mb-1 group-hover:text-primary transition-colors">No. 01 Obsidian</h3>
+<p class="font-body text-sm text-on-surface/60 italic">Woody &amp; Deep</p>
+</div>
+<span class="font-label text-primary">$240</span>
+</div>
+<button class="mt-6 w-full py-4 border border-outline-variant/20 font-label text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-500 active:scale-[0.98]">
+                        Add to Bag
+                    </button>
+</div>
+<!-- Product Card 2 (Asymmetric shift) -->
+<div class="group flex flex-col md:mt-24">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-8 relative">
+<img alt="Luxury perfume bottle" class="w-full h-full object-cover grayscale-[0.3] group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="Sleek glass fragrance bottle in a misty atmosphere with soft focused light hitting the golden liquid inside" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-rTRTnSdnZtBojA__d6S0lprMYNsgQB1VMP-bK5xwz3u8R15RMunfxdUC2uN4dQwKdTjZiv8HK5LKbP22E38NbAlYOscGEi9Q_2k3ENl5TUvZS4MHTUg9--U0SfueThnPAU0CNPTCyRpCHMHIHQmXYuW1XZPcNb88GXZ_BWQRHneNgDqlFjtgLSIY8Qj65BbZdzWqdQ-l-v3Q2z_visbTSr4ihLZl7teRXStwqQ84WJUaRM_8u6m3X-cfOl9jyrW0EVduWk3cPe8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<div class="flex gap-2">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Rose</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Iris</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl mb-1 group-hover:text-primary transition-colors">Velvet Petals</h3>
+<p class="font-body text-sm text-on-surface/60 italic">Floral &amp; Romantic</p>
+</div>
+<span class="font-label text-primary">$195</span>
+</div>
+<button class="mt-6 w-full py-4 border border-outline-variant/20 font-label text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-500 active:scale-[0.98]">
+                        Add to Bag
+                    </button>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-8 relative">
+<img alt="Luxury perfume bottle" class="w-full h-full object-cover grayscale-[0.3] group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="A heavy glass perfume bottle standing on a black pedestal against a dark backdrop with a singular thin light beam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_UmLwBSCS42enaTomM--79QAl7A4sn3A1VKgsbugP31egCst4Uea2xZhsMnECrdhbEmIK_Z29mbANymrx_XrLTCVLeU2sbvjQbi9ov5lxad7bUSe1NnswPJYE4dFKiN3Xah6HtW9WiTB71eQf-ASOQqjSXBPZzWmaGLjJyYhgHZK8ZnKhocUKWvsEer3--krJXIvpDYOrxXnv_CoPs3mHv9PNa7PW2H8WeigF5HzxP8Tqxp2P03Gg_cHWtPvQiqCES9-KFjW6jWU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<div class="flex gap-2">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Citrus</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Amber</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl mb-1 group-hover:text-primary transition-colors">Solar Flare</h3>
+<p class="font-body text-sm text-on-surface/60 italic">Fresh &amp; Vibrant</p>
+</div>
+<span class="font-label text-primary">$210</span>
+</div>
+<button class="mt-6 w-full py-4 border border-outline-variant/20 font-label text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-500 active:scale-[0.98]">
+                        Add to Bag
+                    </button>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-8 relative">
+<img alt="Luxury perfume bottle" class="w-full h-full object-cover grayscale-[0.3] group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="Close up of a dark glass fragrance bottle with an ornate metallic gold cap on a velvet surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz6CtkpaZm-Hx3_Q9Z32CZ6HyJ8cbe3EkDhSxHqedJTbgIyd5yhHMbs1A6X_5AslfZ_-CMUvtWRWkGSGPTR1gEuDuuiIB3XJQx1wRCOoRHGEkchdzEp8dX9GwgOcC1KpI79gCtvr28sQzs6lVcyt2c1PHn5fVjOuRInv45CBp3PuV24YHca0LZuQXmNDLDSCv_eFSNP3zIkafUUGKZY_XPN0VGDBWDMG6E2sq8xFb2nvZ-EkAhU--kAym9vv5cTl-cfpz0NOwnH6k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<div class="flex gap-2">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Cedar</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Musk</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl mb-1 group-hover:text-primary transition-colors">Midnight Atelier</h3>
+<p class="font-body text-sm text-on-surface/60 italic">Oriental &amp; Spicy</p>
+</div>
+<span class="font-label text-primary">$265</span>
+</div>
+<button class="mt-6 w-full py-4 border border-outline-variant/20 font-label text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-500 active:scale-[0.98]">
+                        Add to Bag
+                    </button>
+</div>
+<!-- Product Card 5 (Asymmetric shift) -->
+<div class="group flex flex-col md:mt-24">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-8 relative">
+<img alt="Luxury perfume bottle" class="w-full h-full object-cover grayscale-[0.3] group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="Minimalist product shot of a clear perfume bottle with golden liquid, sitting on dark volcanic rock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiTnDo4Ngw6G1Lx83zMgz08DiAbTnE2obfIjRhRsqpAGw4v-g2Pv6UZ9J07uUG74AEsmh1wDn52MNjMy7xnnJG8wJSo8hF3HB1qpp1P1ni8A3XTe6lTXQJbjQ8AjS1opxY5s_6WjCbtiDbbLitsdEzwJVAlCT9XYbHwTbAwksXo5_BDkBjLo6YbfRpUMuoo8ZoDB9wK8DuUcxNgwM8yYOqQmotbbhSnEWHZ5V4NsN4wedqC_5umXOFuNtMnu9dsRRgFFFE968KSkM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<div class="flex gap-2">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Jasmine</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Silk</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl mb-1 group-hover:text-primary transition-colors">Ethereal Bloom</h3>
+<p class="font-body text-sm text-on-surface/60 italic">Floral &amp; Light</p>
+</div>
+<span class="font-label text-primary">$180</span>
+</div>
+<button class="mt-6 w-full py-4 border border-outline-variant/20 font-label text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-500 active:scale-[0.98]">
+                        Add to Bag
+                    </button>
+</div>
+<!-- Product Card 6 -->
+<div class="group flex flex-col">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-8 relative">
+<img alt="Luxury perfume bottle" class="w-full h-full object-cover grayscale-[0.3] group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="Sophisticated square glass bottle with a dark wood cap placed among dried botanical elements and harsh shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8j6jiikT3Ut0McbDQvI4zwUIkARXX07ntGntxxyGo8_TPAiSbBtgXUw-H7J9MxHFWKjlsgQum2I1J45RXAxs1YJCoujDNZIjwfzZ-qWmSJZbYQb_HBpTvCrxj18JYoHOqHiqYYeaYwzio1n3Hb_mplTX6ZXTAslHXInTKMGCQYU07zvufqbn90tadCM45apeQwX4hws1dUAbCkzm47Qmk9ajIq6v1TH0Q2kPJTb0Wv5Tb1YPVIW6QYr_G2g0xKhhGGTAKNyP1S3A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<div class="flex gap-2">
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Vetiver</span>
+<span class="bg-surface-container-highest px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-label">Oak</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl mb-1 group-hover:text-primary transition-colors">Forest Silence</h3>
+<p class="font-body text-sm text-on-surface/60 italic">Woody &amp; Earthy</p>
+</div>
+<span class="font-label text-primary">$225</span>
+</div>
+<button class="mt-6 w-full py-4 border border-outline-variant/20 font-label text-[10px] uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary hover:border-primary transition-all duration-500 active:scale-[0.98]">
+                        Add to Bag
+                    </button>
+</div>
+</div>
+</section>
+<!-- Newsletter Section (Tonal Shift) -->
+<section class="bg-surface-container-low py-32 px-12">
+<div class="max-w-screen-md mx-auto text-center">
+<h2 class="font-headline text-4xl mb-6">Join the Atelier</h2>
+<p class="font-body text-on-surface/70 mb-12 max-w-lg mx-auto leading-relaxed">Subscribe to receive exclusive access to our limited-run archival releases and olfactory stories.</p>
+<form class="relative max-w-md mx-auto">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-4 font-label text-[10px] uppercase tracking-[0.2em] focus:ring-0 focus:border-primary placeholder:text-on-surface/30" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="absolute right-0 bottom-4 font-label text-[10px] uppercase tracking-[0.2em] text-primary hover:translate-x-1 transition-transform" type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#4d453e]/15 bg-[#0e0e0e]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-16 py-20 w-full max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="text-xl font-headline text-primary tracking-tighter">Avoire Atelier</div>
+<p class="font-headline text-on-surface/50 text-sm italic max-w-xs">An exploration of memory and space through the medium of scent.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label text-primary text-[10px] uppercase tracking-[0.2em] mb-2">Navigation</h4>
+<div class="flex flex-col gap-2">
+<a class="font-headline text-on-surface/50 hover:text-primary transition-colors duration-300 text-sm" href="#">Privacy Policy</a>
+<a class="font-headline text-on-surface/50 hover:text-primary transition-colors duration-300 text-sm" href="#">Terms of Service</a>
+<a class="font-headline text-on-surface/50 hover:text-primary transition-colors duration-300 text-sm" href="#">Shipping &amp; Returns</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label text-primary text-[10px] uppercase tracking-[0.2em] mb-2">Connect</h4>
+<div class="flex gap-6">
+<a class="font-headline text-on-surface/50 hover:text-primary transition-colors duration-300 text-sm uppercase tracking-widest text-[10px]" href="#">Instagram</a>
+<a class="font-headline text-on-surface/50 hover:text-primary transition-colors duration-300 text-sm uppercase tracking-widest text-[10px]" href="#">Vogue</a>
+<a class="font-headline text-on-surface/50 hover:text-primary transition-colors duration-300 text-sm uppercase tracking-widest text-[10px]" href="#">Editorial</a>
+</div>
+<p class="mt-12 font-headline text-[10px] text-on-surface/30">© 2024 Avoire Atelier. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

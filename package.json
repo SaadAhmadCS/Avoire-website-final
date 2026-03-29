@@ -1,0 +1,31 @@
+{
+  "name": "avoire-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@auth/mongodb-adapter": "^3.11.1",
+    "dotenv": "^17.3.1",
+    "lucide-react": "^0.575.0",
+    "mongodb": "^6.21.0",
+    "mongoose": "^9.2.1",
+    "next": "16.1.6",
+    "next-auth": "^4.24.13",
+    "nodemon": "^3.1.14",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "resend": "^6.9.2",
+    "sweetalert2": "^11.26.20"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4"
+  }
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#313030",
+              "surface-bright": "#393939",
+              "primary-fixed": "#f7dec7",
+              "tertiary-fixed-dim": "#c7c6c6",
+              "inverse-surface": "#e5e2e1",
+              "on-primary-fixed-variant": "#544433",
+              "surface-variant": "#353535",
+              "primary-fixed-dim": "#dac2ac",
+              "on-tertiary": "#303030",
+              "error": "#ffb4ab",
+              "on-error": "#690005",
+              "surface-dim": "#131313",
+              "surface-container-high": "#2a2a2a",
+              "primary-container": "#cbb49e",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary-fixed-dim": "#d3c4b6",
+              "on-tertiary-fixed-variant": "#464747",
+              "on-secondary-fixed-variant": "#4f453a",
+              "on-surface-variant": "#d1c4ba",
+              "surface-container-highest": "#353535",
+              "on-primary": "#3c2e1e",
+              "inverse-primary": "#6d5b49",
+              "outline": "#9a8f86",
+              "surface-container": "#20201f",
+              "secondary-container": "#4f453a",
+              "tertiary-fixed": "#e4e2e2",
+              "on-error-container": "#ffdad6",
+              "on-tertiary-fixed": "#1b1c1c",
+              "secondary-fixed": "#efe0d1",
+              "on-primary-fixed": "#26190b",
+              "on-secondary": "#382f25",
+              "on-surface": "#e5e2e1",
+              "surface": "#131313",
+              "secondary": "#d3c4b6",
+              "tertiary": "#d5d3d3",
+              "surface-container-low": "#1c1b1b",
+              "surface-tint": "#dac2ac",
+              "on-secondary-container": "#c1b3a5",
+              "primary": "#e8cfb8",
+              "on-background": "#e5e2e1",
+              "tertiary-container": "#b9b8b8",
+              "outline-variant": "#4d453e",
+              "background": "#131313",
+              "error-container": "#93000a",
+              "on-tertiary-container": "#494949",
+              "on-secondary-fixed": "#221a11",
+              "on-primary-container": "#564634"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .backdrop-blur-xl { backdrop-filter: blur(20px); }
+      .text-glow { text-shadow: 0 0 15px rgba(232, 207, 184, 0.3); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 no-border bg-gradient-to-b from-[#131313] to-transparent">
+<div class="flex justify-between items-center w-full px-12 py-8 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif tracking-widest text-[#e8cfb8]">Avoire</div>
+<div class="hidden md:flex space-x-12">
+<a class="font-serif text-[#e5e2e1]/70 hover:text-[#e8cfb8] transition-colors duration-500 uppercase tracking-[0.1em] text-xs" href="#">Home</a>
+<a class="font-serif text-[#e5e2e1]/70 hover:text-[#e8cfb8] transition-colors duration-500 uppercase tracking-[0.1em] text-xs" href="#">Shop</a>
+<a class="font-serif text-[#e8cfb8] border-b border-[#e8cfb8]/30 pb-1 uppercase tracking-[0.1em] text-xs" href="#">About</a>
+<a class="font-serif text-[#e5e2e1]/70 hover:text-[#e8cfb8] transition-colors duration-500 uppercase tracking-[0.1em] text-xs" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-8">
+<button class="text-[#e8cfb8] transition-all duration-700 ease-in-out scale-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="text-[#e8cfb8] transition-all duration-700 ease-in-out scale-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-16">
+<!-- Hero Section -->
+<section class="px-12 max-w-screen-2xl mx-auto mb-32">
+<div class="grid grid-cols-12 gap-8 items-end">
+<div class="col-span-12 md:col-span-7">
+<span class="font-label text-primary uppercase tracking-[0.2em] text-[10px] mb-6 block">The Noir Atelier</span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface leading-tight -tracking-[0.02em] mb-12">
+                        From Twilight <br/>To <span class="italic text-primary/80">Obsidian</span>.
+                    </h1>
+</div>
+<div class="col-span-12 md:col-span-5 pb-4">
+<p class="font-body text-on-surface-variant text-lg leading-relaxed max-w-md italic">
+                        "A fragrance is not just a scent; it is the silent architecture of a memory, constructed in the half-light between day and night."
+                    </p>
+</div>
+</div>
+</section>
+<!-- The Story Section -->
+<section class="bg-surface-container-low py-32 mb-32">
+<div class="max-w-screen-2xl mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-1000" data-alt="dramatic high-contrast studio photography of a dark glass perfume bottle emerging from deep black shadows with golden liquid glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhLSe60XTBNI-2_YFqXAPaDSI6VQMtOhKlCJmD__sfzQWemDKay21Rarprg5Oj2q8j7vtc8_A8ocKpDuPJJQCaRfxZ4gQG5DhXd4iCdFCnls_AXwFuFpKd_7Cq1-QEDpPU3cYuShuZhXWZ1gENCrJlBV8pC0zccq2SKrBGdY2FOW9O8fADtME6b9ox7YC5s3mkR5shKahGfmRLGV0Xqc1XWdJ09ZPiFkuhKMLeiORdGMZ0bmuliUJ5zgiY3unNl0qqA0OUIe6ns3E"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-80 hidden lg:block overflow-hidden border border-outline-variant/10">
+<img class="w-full h-full object-cover" data-alt="close up of raw botanical ingredients like dried sandalwood and vanilla pods on a dark textured slate background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNWhDXKXwluk1m9_49g0S3LuUPIxVD5r9G4OHCQfzOB2p9bbP-7VTbQH4oGilW_K57Mc_sBqTwmfBUekOazYH6YNq-pAw9nz723X6oHutG-Y9qQ0qlUCfezb8xlSayVWbZ_CYqqKd7quo9gSpYZoHn2fDtHRG0jFxSpszv62gIxpoOMAX5GTeRKv2fTEX7q_RWqtBJTu5XamDu5AECXHB7xrkMPdn5licaKO0eRO7oUvnk7XSGx5O1sNDPRE08O2vnuclzYN-oix4"/>
+</div>
+</div>
+<div class="space-y-12">
+<h2 class="font-headline text-4xl text-on-surface leading-snug">The Transition</h2>
+<div class="space-y-8 font-body text-on-surface-variant leading-relaxed text-lg">
+<p>
+                                Avoire was born in the ephemeral moment of twilight—the hour where the sun surrenders to the void. We began as a small laboratory experimenting with the weight of shadows, translating the cooling air and the blooming nocturnal jasmine into liquid form.
+                            </p>
+<p>
+                                Our journey is one of deepening. From the soft golds of our inception to the absolute obsidian depth of our current private collection, we have chased the complexity of the dark. We believe that true luxury is found when the distractions of light are removed, leaving only the raw, visceral essence of the ingredient.
+                            </p>
+</div>
+<div class="pt-8">
+<button class="bg-primary text-on-primary px-10 py-4 font-label uppercase tracking-widest text-[10px] rounded-none hover:shadow-[0_0_30px_rgba(232,207,184,0.15)] transition-all duration-500">
+                                Discover the Collection
+                             </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Heritage Timeline -->
+<section class="px-12 max-w-screen-2xl mx-auto mb-48">
+<div class="mb-24 text-center">
+<h2 class="font-headline text-5xl mb-4">A Legacy Carved in Shadow</h2>
+<p class="font-label text-outline tracking-[0.3em] uppercase text-xs">Our Chronological Heritage</p>
+</div>
+<div class="space-y-32 relative">
+<!-- Timeline Line -->
+<div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-outline-variant/20 hidden md:block"></div>
+<!-- 1924 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="md:text-right md:pr-16 order-2 md:order-1">
+<span class="font-headline text-primary text-6xl block mb-4">1924</span>
+<h3 class="font-headline text-2xl text-on-surface mb-4">The Grasse Foundation</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">In the hills of Provence, a master distiller seeks to capture the scent of the earth after a storm. The first copper stills are commissioned, marking the birth of the Atelier.</p>
+</div>
+<div class="order-1 md:order-2">
+<div class="aspect-video bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="vintage black and white photograph of an old french perfumery laboratory with glass vials and antique copper equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-UvRrpABu8JwE6lmtOhYdkB9D74x79jyD3-MlNG4mD8ArCco5qm9u1AJpBuOnvEMFtnr_PWZgvy8wiROne7WRiHPoJQtRTn1KJjYN1cxTHjy2j14kh-Th_Os0IAz53VD_PUO0nO0HCExRRf1mYCI4cIBsrIDilkl6q1AvysmM9fkam2ku5hFDMpI63fPEfsT0YqFqW4DbbRY1tLcXLXcB2Bz3XvQTs2jkN7Hd_KAJSw3bDTg8nBc-zWcPSKjFyyLUp-3TurlskMU"/>
+</div>
+</div>
+</div>
+<!-- 1968 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="md:pl-16 md:order-2">
+<span class="font-headline text-primary text-6xl block mb-4">1968</span>
+<h3 class="font-headline text-2xl text-on-surface mb-4">The Obsidian Protocol</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">The Atelier shifts focus to rare resins and woods. We reject the floral trends of the decade in favor of heavy, architectural scents that linger for days.</p>
+</div>
+<div class="order-1">
+<div class="aspect-video bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="atmospheric shot of thick smoke rising from burning incense in a dark moody room with a single shaft of light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH0OY7iMjqgqb9mjfCrUeCPLo9g82TJnusdxizEwTeOVMHXlRpxErcc9P4nQmMqF52aBoUnaS80uUJxVxw5fDrm9jXimCXsHR21Lt2pMbp-F7HQ4TP7zqnSVh33sp3A4P65zM8_07EoVGwCgM0TeBOXpD7IiCNRbG57QeR0w3TwWBJm8N6Bc09_mKU8e7GxeWSgN5fxENi9PHVxzU1ctnD4Ogr-sxEgFmqX3KGtqbksZ3Hzj3UE47z30ni5I3RWBOwFUV37UoaQNU"/>
+</div>
+</div>
+</div>
+<!-- Present -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="md:text-right md:pr-16 order-2 md:order-1">
+<span class="font-headline text-primary text-6xl block mb-4">Present</span>
+<h3 class="font-headline text-2xl text-on-surface mb-4">The Digital Atelier</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Today, Avoire stands as a beacon of uncompromising quality. We fuse ancestral techniques with modern precision, creating an sensory experience that transcends time.</p>
+</div>
+<div class="order-1 md:order-2">
+<div class="aspect-video bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="modern minimalist perfume lab with sleek black surfaces and glowing amber glass bottles in a symmetrical arrangement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSB_LOSAaAuTlP7051fY0RoGKwKPsYZwein05TzpS_1u1decoFWR8G2XJkMjFYdJCm90NRIFUMyoSxm70v3qAp5p6_JXvRZRMdJD2F35_KnZC_mVPWEFaCRZpePBPlNemVd3qmJ5ZAO2-ZX5dsbS75N6PM-dOGPajCDDlbCwV-DjH2QsGzmL_TOz7kGtkYXdUXmgcdHd02lGKQkjFpaCtoIOS5T8Anvga7fKogkDDoT3A30YiXlUwbgCB_s2fpCYdYm1evviDpSCU"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Atelier in Grasse -->
+<section class="mb-32">
+<div class="w-full h-[716px] relative overflow-hidden group">
+<img class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[3s]" data-alt="sweeping landscape of old stone buildings in Grasse France at dusk with warm glowing windows and a dark purple sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhMZ7KVQfpZxAyFioXDRR8rlXI0TbFaCiVLe312X2sKA2A1U5B37H0v-miux238vitTyS8wQboMdJh7FSB8IiBi_j9n2qUAa0Am6eQE3SA982uf6LPILjdTzVNDZE3GYJ5WWPLgmZv3F9LCgIlTilaIU3kVYRScivf4VfxwWUlRFafMnF58O9wsBKZtOIrANmoyKD2naBjvihaWDL1iQYJiqczIEN0eykea7odJBxBNH45V5La6ZqKGdSEIshCkZeloRyt2c2h13w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute bottom-20 left-12 md:left-24 max-w-2xl">
+<span class="font-label text-primary uppercase tracking-widest text-xs mb-4 block">Locus Spiritus</span>
+<h2 class="font-headline text-5xl text-on-surface mb-8">The Grasse Sanctuary</h2>
+<p class="font-body text-on-surface/80 text-lg leading-relaxed mb-8">
+                        Our heart remains in the cobblestone streets of Grasse. Within a 17th-century stone atelier, our Master Perfumer works exclusively with natural extractions. It is here that the heritage of Avoire is preserved, bottled, and sent out to the world.
+                    </p>
+<div class="flex items-center space-x-4 text-primary">
+<span class="font-label uppercase tracking-widest text-[10px]">Location</span>
+<div class="w-12 h-[1px] bg-primary/40"></div>
+<span class="font-body italic text-sm">43.6589° N, 6.9265° E</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Scent Profile Chips - Visual Break -->
+<section class="max-w-screen-xl mx-auto px-12 py-24 border-y border-outline-variant/10">
+<div class="flex flex-wrap justify-center gap-4">
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label text-[10px] uppercase tracking-widest border border-outline-variant/20">Rare Oud</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label text-[10px] uppercase tracking-widest border border-outline-variant/20">Black Bergamot</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label text-[10px] uppercase tracking-widest border border-outline-variant/20">Smoked Vetiver</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label text-[10px] uppercase tracking-widest border border-outline-variant/20">Night Jasmine</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label text-[10px] uppercase tracking-widest border border-outline-variant/20">Amber Absolute</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label text-[10px] uppercase tracking-widest border border-outline-variant/20">Castoreum</span>
+<span class="px-6 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label text-[10px] uppercase tracking-widest border border-outline-variant/20">Damp Earth</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full border-t border-[#4d453e]/15 mt-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-16 py-20 w-full max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-serif text-[#e8cfb8] tracking-tighter">Avoire Atelier</div>
+<p class="font-serif text-[#e5e2e1]/50 text-sm leading-relaxed max-w-xs">
+                    Curators of the invisible. Crafting high-end fragrances that bridge the gap between memory and reality.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-serif text-[#e8cfb8] text-xs uppercase tracking-widest">Navigation</h4>
+<ul class="space-y-2">
+<li><a class="font-serif text-[#e5e2e1]/50 hover:text-[#e8cfb8] transition-colors duration-300 text-sm" href="#">Privacy Policy</a></li>
+<li><a class="font-serif text-[#e5e2e1]/50 hover:text-[#e8cfb8] transition-colors duration-300 text-sm" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-serif text-[#e8cfb8] text-xs uppercase tracking-widest">Support</h4>
+<ul class="space-y-2">
+<li><a class="font-serif text-[#e5e2e1]/50 hover:text-[#e8cfb8] transition-colors duration-300 text-sm" href="#">Shipping &amp; Returns</a></li>
+<li><a class="font-serif text-[#e5e2e1]/50 hover:text-[#e8cfb8] transition-colors duration-300 text-sm" href="#">Newsletter Signup</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-serif text-[#e8cfb8] text-xs uppercase tracking-widest">Connect</h4>
+<div class="flex space-x-6">
+<a class="text-[#e5e2e1]/50 hover:text-[#e8cfb8] transition-all duration-300" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="text-[#e5e2e1]/50 hover:text-[#e8cfb8] transition-all duration-300" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+</div>
+<div class="font-serif text-[#e5e2e1]/50 text-[10px] pt-8">
+                    © 2024 Avoire Atelier. All Rights Reserved.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>
